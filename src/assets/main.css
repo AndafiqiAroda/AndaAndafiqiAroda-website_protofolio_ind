@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+* {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.slide-fade-enter-active {
+    transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+    transform: translateX(20px);
+    opacity: 0;
+}
+
+.text-gradient {
+    background: -webkit-linear-gradient(315deg, #1e30f3 0%, #e21e80 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-primary-to-secondary {
+    background: #1e30f3;
+    background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
+}
+
+.feature {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    font-size: 1.5rem;
+}
+
+.mode-toggle {
+    height: 48px;
+    width: 48px;
+    position: fixed;
+    right: 0;
+    top: 150px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px 0 0 8px;
+    cursor: pointer;
+}
+
+.preloader {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+[data-bs-theme="light"] {
+       /*Background*/
+    --bs-body-bg: linear-gradient(135deg, #663939, #f273b2); /* Gradien linear dari #663939 ke #f273b2 */
+    --bs-secondary: #f273b2 !important;
+    --bs-secondary-rgb: 242, 115, 178 !important;
+}
+
+[data-bs-theme="dark"] {
+    /*Background*/
+    --bs-body-bg: linear-gradient(135deg, #663939, #f273b2); /* Gradien linear dari #663939 ke #f273b2 */
+    --bs-secondary: #f273b2 !important;
+    --bs-secondary-rgb: 242, 115, 178 !important;
+
+    .text-gradient {
+        background: -webkit-linear-gradient(315deg, #14f1f1 0%, #f3e846 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .bg-gradient-primary-to-secondary {
+        background: linear-gradient(135deg, #14f1f1  0%, #f3e846 100%);
+    }
+
+    .text-primary {
+        color: #14f1f1 !important;
+    }
+
+    .text-secondary {
+        color: #f3e846 !important;
+    }
+
+    .btn-primary {
+        background-color: #6ea8fe !important;
+        color: #000 !important;
+    }
+
+    .btn-outline-dark {
+        color: #fff;
+        border-color: #fff !important;
+    }
+
+    .mode-toggle {
+        background: rgb(13, 17, 23) !important;
+        border: 1px solid rgb(48, 54, 61) !important;
+    }
+}
